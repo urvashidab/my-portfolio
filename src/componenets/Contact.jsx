@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const backendURL =
-    "https://my-portfolio-backend-xgmd.onrender.com/api/contact";
+    "https://my-portfolio-backend-production-d8bc.up.railway.app/api/contact";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
