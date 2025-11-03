@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Dosis:wght@200..800&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+  background-clip: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+.hoverMenu {
+  @apply hover:text-[#5D688A] transition-colors duration-300;
+}
+
+@layer base {
+  html {
+    @apply bg-[#ede0d4]; /* Light mode */
+  }
+  .dark html {
+    @apply bg-gradient-to-br from-[#1e1e2e] via-[#2a2e3b] to-[#3b4252]; /* Dark mode */
+  }
+
+  body {
+    @apply bg-[#ede0d4] text-[#5d688a]; /* Light mode */
+  }
+
+  .dark body {
+    @apply bg-gradient-to-br from-[#1e1e2e] via-[#2a2e3b] to-[#3b4252] text-gray-200; /* Dark mode */
+  }
+}
+
+@layer utilities {
+  .textPrimary {
+    color: #826674; /* Light mode */
+  }
+  .dark .textPrimary {
+    color: #f2b5d4;
+    /* Dark mode */
+  }
+
+  .textSecondary {
+    color: #5d688a; /* Light mode */
+  }
+  .dark .textSecondary {
+    color: #afcbff; /* Dark mode */
+  }
+
+  .btnStyle {
+    @apply bg-[#826674] text-white px-4 py-2 rounded-lg hover:bg-[#5D688A] transition duration-300 cursor-pointer;
+  }
+
+  .socialMediaStyle {
+    @apply bg-[#5d688a] text-white px-4 py-2 rounded-lg hover:bg-[#826674] transition duration-300 cursor-pointer;
+  }
+
+  .btnStyle svg {
+    @apply transition-transform duration-300;
+  }
+  .btnStyle:hover svg {
+    @apply translate-x-1 -translate-y-1;
+  }
+
+  .headingStyle {
+    @apply text-4xl font-extrabold text-center mb-16;
+    color: #5d688a; /* light mode */
+  }
+  .dark .headingStyle {
+    color: #afcbff; /* dark mode */
+  }
+
+  .gridSectionHover {
+    @apply p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-center;
+    background-color: rgba(255, 255, 255, 0.2); /* light mode */
+  }
+  .dark .gridSectionHover {
+    background-color: rgba(0, 0, 0, 0.3); /* dark mode overlay */
+  }
+
+  .gridHeadingStyle {
+    @apply text-2xl font-bold mb-6;
+    color: #826674; /* light mode */
+  }
+  .dark .gridHeadingStyle {
+    color: #f2b5d4; /* dark mode */
+  }
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: inherit; /* inherits light or dark background */
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
