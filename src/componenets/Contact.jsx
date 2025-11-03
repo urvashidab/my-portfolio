@@ -5,7 +5,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
-  const backendURL = "https://my-portfolio-backend-xgmd.onrender.com/";
+  const backendURL =
+    "https://my-portfolio-backend-xgmd.onrender.com/api/contact";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
