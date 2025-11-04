@@ -16,7 +16,9 @@ export default function Main() {
         className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 shadow-md shadow-gray-400 rounded-full object-cover "
       ></img>
       {/* name section */}
-      <h2 className="text-2xl  textPrimary font-bold">Hello, I'm Urvashi</h2>
+      <h2 className="text-2xl  textPrimary font-bold mt-20">
+        Hello, I'm Urvashi
+      </h2>
       <p className="textPrimary text-lg mb-2">
         Judious, Active, Trustworthy, Innovative, Noticeable
       </p>
